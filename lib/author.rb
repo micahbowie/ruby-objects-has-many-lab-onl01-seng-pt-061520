@@ -23,7 +23,7 @@ class Author
     @@song_author_list =[]
     the_list = Post.all
     the_list.each {|posts| @@song_author_list << posts.artist }
-    lets_count = @@song_author_list.uniq
+    lets_count = @@song_author_list
     lets_count.count 
   end 
 end 
