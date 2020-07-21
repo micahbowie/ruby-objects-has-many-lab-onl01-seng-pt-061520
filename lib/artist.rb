@@ -26,7 +26,7 @@ class Artist
     @@song_artist_list =[]
     the_list = Song.all
     the_list.each {|song| @@song_artist_list << song.artist }
-    lets_count = @@song_artist_list
+    lets_count = @@song_artist_list.uniq
     lets_count.count 
   end 
 end 
