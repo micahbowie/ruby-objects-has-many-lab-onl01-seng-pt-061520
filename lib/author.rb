@@ -20,10 +20,10 @@ class Author
   end 
   
   def self.post_count
-    @@song_artist_list =[]
+    @@song_author_list =[]
     the_list = Post.all
-    the_list.each {|song| @@song_artist_list << song.artist }
-    lets_count = @@song_artist_list.uniq
+    the_list.each {|song| @@song_author_list << post.artist }
+    lets_count = @@song_author_list.uniq
     lets_count.count 
   end 
 end 
