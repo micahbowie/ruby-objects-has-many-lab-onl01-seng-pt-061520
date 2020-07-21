@@ -17,9 +17,6 @@ class Artist
   def songs 
     the_list = Song.all
     the_list.select {|song| song.artist == self }
-    #Song.all select do |song| 
-      #song.artist == self
-    #end 
   end 
 end 
 
