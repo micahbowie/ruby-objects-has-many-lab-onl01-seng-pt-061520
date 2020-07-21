@@ -1,8 +1,11 @@
 class Artist 
   attr_accessor :name 
   
+ # @@all_artist = []
+  
   def initialize(name)
     @name =name 
+    #@@all_artist << name 
   end 
   
   def add_song_by_name(name, genre)
@@ -20,6 +23,9 @@ class Artist
   end 
   
   def self.song_count
+    @@song_artist_list =[]
+    the_list.each {|song| @@song_artist_list << song.artist }
+    @@song_artist_list.uniq.count 
     
   end 
   
