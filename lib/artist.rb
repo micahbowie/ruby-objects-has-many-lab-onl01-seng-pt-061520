@@ -15,9 +15,11 @@ class Artist
   end 
   
   def songs 
-    Song.all select do |song| 
-      song.artist == self
-    end 
+    the_list = Song.all
+    the_list.select {|song| song.artist == self }
+    #Song.all select do |song| 
+      #song.artist == self
+    #end 
   end 
 end 
 
