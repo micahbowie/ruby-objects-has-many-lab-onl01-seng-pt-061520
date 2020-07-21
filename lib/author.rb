@@ -5,24 +5,24 @@ class Author
     @name =name 
   end 
   
-  def add_post_by_titl(name)
-    blog = Post.new(name)
-    add_song(song)
+  def add_post_by_title(title)
+    blog = Post.new(title)
+    add_posts(blog)
   end 
   
-  def add_song(song)
-    song.artist=self 
+  def add_post(posts)
+    posts.author=self 
   end 
   
-  def songs 
-    the_list = Song.all
-    the_list.select {|song| song.artist == self }
+  def posts 
+    the_list = Post.all
+    the_list.select {|posts| posts.author == self }
   end 
   
   def self.post_count
     @@song_author_list =[]
     the_list = Post.all
-    the_list.each {|song| @@song_author_list << post.artist }
+    the_list.each {|posts| @@song_author_list << posts.artist }
     lets_count = @@song_author_list.uniq
     lets_count.count 
   end 
