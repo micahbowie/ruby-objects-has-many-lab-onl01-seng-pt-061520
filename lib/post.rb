@@ -20,6 +20,7 @@ class Post
     if self.author == true 
       self.author.name 
     else nil 
+    end 
   end 
   
 end 
